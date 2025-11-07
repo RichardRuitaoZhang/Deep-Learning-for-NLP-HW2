@@ -41,12 +41,12 @@ HW2/
 
 ## Environment Setup
 
-1. Create the conda environment from the provided YAML file:
+**1. Create the conda environment from the provided YAML file:**
 
        conda env create -f transformer.yml
        conda activate transformer
 
-2. Ensure the following key packages are installed (already included in the YAML file):
+**2. Ensure the following key packages are installed (already included in the YAML file):**
 
 | Package | Version | Description |
 |----------|----------|-------------|
@@ -62,8 +62,7 @@ HW2/
 | **tokenizers** | 0.20.0 | Fast tokenization backend for Transformers |
 
 
-
-3. CUDA must be available and compatible with your PyTorch build for GPU training.
+**3. CUDA must be available and compatible with your PyTorch build for GPU training.**
 
 ---
 
