@@ -1,0 +1,112 @@
+# CS461: Deep Learning for NLP — HW2
+
+This repository contains the full implementation and environment setup for Homework 2 of CS461: Deep Learning for Natural Language Processing (Fall 2025).  
+All scripts are designed for GPU execution and follow the standard structure for classification (Part 1) and generation (Part 2) tasks.
+
+---
+
+## Directory Structure
+
+HW2/  
+├── __pycache__/              # Python cache files  
+├── data/                     # Input datasets for training and validation  
+├── HW#2/                     # Original assignment materials or provided starter files  
+├── hw2/                      # Local working directory for implementation/testing  
+├── logs/                     # Training and evaluation log outputs  
+├── models/                   # Saved checkpoints and model weights  
+├── pretrain/                 # Pretrained transformer models (downloaded or cached)  
+├── scripts/                  # SLURM/GPU training shell scripts  
+│   ├── train_classification_gpu.sh  
+│   └── train_generation_gpu.sh  
+├── utils/                    # Python utility modules  
+│   ├── classification.py     # Classification task pipeline  
+│   ├── generation.py         # Generative model pipeline  
+│   ├── starter.py            # Core transformer architecture and shared components  
+│   └── transformer.yml       # Conda environment specification  
+
+---
+
+## Environment Setup
+
+1. Create the conda environment from the provided YAML file:
+
+       conda env create -f transformer.yml
+       conda activate transformer
+
+2. Ensure the following key packages are installed (already included in the YAML file):
+
+       torch >= 2.0  
+       transformers  
+       datasets  
+       evaluate  
+       accelerate  
+       numpy  
+       pandas  
+       scikit-learn  
+
+3. CUDA must be available and compatible with your PyTorch build for GPU training.
+
+---
+
+## Training Scripts
+
+All GPU-based training is handled through shell scripts under `scripts/`.
+
+### Classification Task (Part 1)
+Run:
+
+       bash scripts/train_classification_gpu.sh
+
+- Loads dataset from `data/`  
+- Initializes model defined in `utils/classification.py`  
+- Logs training progress to `logs/`  
+- Saves checkpoints to `models/`
+
+### Generative Task (Part 2)
+Run:
+
+       bash scripts/train_generation_gpu.sh
+
+- Executes generative model training as implemented in `utils/generation.py`  
+- Uses `starter.py` for core Transformer definitions  
+- Outputs logs and checkpoints to their respective directories  
+
+---
+
+## Logs
+
+All training and validation metrics are automatically stored in the `logs/` directory.  
+Each log file includes a timestamp and task type for reproducibility.
+
+---
+
+## Models
+
+The `models/` directory stores:
+- Intermediate checkpoints (`.pt` or `.bin`)  
+- Final trained model weights  
+- Any exported Hugging Face–compatible model files for submission  
+
+Ensure to compress this directory for final submission if model weights are required.
+
+---
+
+## Pretrained Models
+
+The `pretrain/` directory contains cached pretrained backbones (e.g., `bert-base-uncased`, `gpt2`, etc.).  
+If not present, they will be automatically downloaded via the Hugging Face hub during the first run.
+
+---
+
+## Notes
+
+- All paths are relative to the root `HW2/` directory.  
+- Both training scripts are GPU-optimized and compatible with the provided conda environment.  
+- Logs and model outputs are automatically organized; manual cleanup is optional.  
+- No additional external datasets or fine-tuned checkpoints are required beyond what’s provided.
+
+---
+
+**Author:** Ruitao Zhang  
+**Course:** CS461 — Deep Learning for NLP, Fall 2025  
+**Instructor:** Prof. David Demeter

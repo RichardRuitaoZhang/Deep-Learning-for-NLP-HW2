@@ -1,0 +1,30 @@
+/var/spool/slurmd/job48057/slurm_script: line 17: conda: command not found
+Starting GPT-based generative fine-tuning on GPU...
+Thu Nov  6 20:25:45 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.86.15              Driver Version: 570.86.15      CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:17:00.0 Off |                    0 |
+| N/A   23C    P0             41W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Using device: NVIDIA A100 80GB PCIe
+loading pretrained weights...
+Epoch 1: train_loss=0.1139, val_acc=0.2520
+Epoch 2: train_loss=0.0503, val_acc=0.2440
+Epoch 3: train_loss=0.0128, val_acc=0.2520
+Model saved to models/generator.pt
+Total runtime: 4.90 minutes
+Generative fine-tuning completed. Model saved to models/generator.pt

@@ -1,0 +1,30 @@
+/var/spool/slurmd/job33136/slurm_script: line 17: conda: command not found
+Starting generative fine-tuning on GPU...
+Thu Nov  6 17:22:59 2025       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.86.15              Driver Version: 570.86.15      CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA A100 80GB PCIe          On  |   00000000:B1:00.0 Off |                    0 |
+| N/A   24C    P0             42W /  300W |       1MiB /  81920MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+loading pretrained weights...
+Traceback (most recent call last):
+  File "/gpfs/projects/b1080/rz/cs461/HW2/generation.py", line 171, in <module>
+    main()
+  File "/gpfs/projects/b1080/rz/cs461/HW2/generation.py", line 159, in main
+    loss = train(model, train_loader, criterion, optimizer, opt.device, id_list)
+TypeError: train() takes 5 positional arguments but 6 were given
+Fine-tuning completed. Model saved to models/qa_finetuned.pt
