@@ -76,7 +76,7 @@ Run:
        sbatch scripts/train_classification_gpu.sh
 
 - Loads dataset from `data/`  
-- Initializes model defined in `utils/classification.py`  
+- Initializes model defined in `classification.py`  
 - Logs training progress to `logs/`  
 - Saves checkpoints to `models/`
 
@@ -85,7 +85,7 @@ Run:
 
        sbatch scripts/train_generation_gpu.sh
 
-- Executes generative model training as implemented in `utils/generation.py`  
+- Executes generative model training as implemented in `generation.py`  
 - Uses `starter.py` for core Transformer definitions  
 - Outputs logs and checkpoints to their respective directories  
 
