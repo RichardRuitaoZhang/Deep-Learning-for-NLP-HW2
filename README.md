@@ -46,7 +46,7 @@ HW2/
        conda env create -f transformer.yml
        conda activate transformer
 
-**2. Ensure the following key packages are installed (already included in the YAML file):**
+**2. Ensure the following key packages are installed (already included in the transformer.yml):**
 
 | Package | Version | Description |
 |----------|----------|-------------|
