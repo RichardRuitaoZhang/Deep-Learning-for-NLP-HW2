@@ -73,7 +73,7 @@ All GPU-based training is handled through shell scripts under `scripts/`.
 ### Classification Task (Part 1)
 Run:
 
-       bash scripts/train_classification_gpu.sh
+       sbatch scripts/train_classification_gpu.sh
 
 - Loads dataset from `data/`  
 - Initializes model defined in `utils/classification.py`  
@@ -83,7 +83,7 @@ Run:
 ### Generative Task (Part 2)
 Run:
 
-       bash scripts/train_generation_gpu.sh
+       sbatch scripts/train_generation_gpu.sh
 
 - Executes generative model training as implemented in `utils/generation.py`  
 - Uses `starter.py` for core Transformer definitions  
