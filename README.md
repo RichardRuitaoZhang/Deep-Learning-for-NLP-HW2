@@ -75,7 +75,7 @@ Run:
 
        sbatch scripts/train_classification_gpu.sh
 
-- Loads dataset from `data/`  
+- Loads dataset from `data/`, which contains `obqa.train.txt` `obqa.valid.txt` `obqa.test.txt` `wiki.train.txt` `wiki.valid.txt` `wiki.test.txt`
 - Initializes model defined in `classification.py`  
 - Logs training progress to `logs/`  
 - Saves checkpoints to `models/`
@@ -86,7 +86,7 @@ Run:
        sbatch scripts/train_generation_gpu.sh
 
 - Executes generative model training as implemented in `generation.py`  
-- Uses `starter.py` for core Transformer definitions  
+- Uses `starter.py` from David (moved to the root) for core Transformer definitions  
 - Outputs logs and checkpoints to their respective directories  
 
 ---
@@ -111,7 +111,7 @@ Ensure to compress this directory for final submission if model weights are requ
 
 ## Pretrained Models
 
-The `pretrain/` directory contains cached pretrained backbones (e.g., `bert-base-uncased`, `gpt2`, etc.).  
+The `pretrain/` directory contains cached pretrained backbones `model_weights` from David's 'HW#2'.  
 If not present, they will be automatically downloaded via the Hugging Face hub during the first run.
 
 ---
