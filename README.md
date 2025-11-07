@@ -48,14 +48,19 @@ HW2/
 
 2. Ensure the following key packages are installed (already included in the YAML file):
 
-       torch >= 2.0  
-       transformers  
-       datasets  
-       evaluate  
-       accelerate  
-       numpy  
-       pandas  
-       scikit-learn  
+       | Package             | Version            | Description                                            |
+| ------------------- | ------------------ | ------------------------------------------------------ |
+| **torch**           | 2.8.0              | Core PyTorch deep learning framework (CUDA 12 enabled) |
+| **transformers**    | 4.45.2             | Hugging Face Transformers for BERT/GPT models          |
+| **datasets**        | 3.0.2              | Dataset loader and preprocessing tools                 |
+| **evaluate**        | 0.4.2              | Evaluation metrics for NLP tasks                       |
+| **accelerate**      | 1.1.1              | Multi-GPU / distributed training support               |
+| **numpy**           | 2.2.6              | Numerical computation backend                          |
+| **pandas**          | 2.2.x *(implied)*  | Data manipulation and analysis                         |
+| **scikit-learn**    | 1.5.x *(optional)* | Metrics and preprocessing utilities                    |
+| **huggingface-hub** | 0.26.2             | Sync models/datasets with the Hugging Face Hub         |
+| **tokenizers**      | 0.20.0             | Fast tokenization backend for Transformers             |
+
 
 3. CUDA must be available and compatible with your PyTorch build for GPU training.
 
