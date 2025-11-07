@@ -7,22 +7,22 @@ All scripts are designed for GPU execution and follow the standard structure for
 
 ## Directory Structure
 
-HW2/  
-├── __pycache__/              # Python cache files  
-├── data/                     # Input datasets for training and validation  
-├── HW#2/                     # Original assignment materials or provided starter files  
-├── hw2/                      # Local working directory for implementation/testing  
-├── logs/                     # Training and evaluation log outputs  
-├── models/                   # Saved checkpoints and model weights  
-├── pretrain/                 # Pretrained transformer models (downloaded or cached)  
-├── scripts/                  # SLURM/GPU training shell scripts  
-│   ├── train_classification_gpu.sh  
-│   └── train_generation_gpu.sh  
-├── utils/                    # Python utility modules  
-│   ├── classification.py     # Classification task pipeline  
-│   ├── generation.py         # Generative model pipeline  
-│   ├── starter.py            # Core transformer architecture and shared components  
-│   └── transformer.yml       # Conda environment specification  
+HW2/
+├── __pycache__/                # Python cache files
+├── data/                       # Input datasets for training and validation
+├── HW#2/                       # Original assignment materials or provided starter files
+├── hw2/                        # Local working directory for implementation/testing
+├── logs/                       # Training and evaluation log outputs
+├── models/                     # Saved checkpoints and model weights
+├── pretrain/                   # Pretrained transformer models (downloaded or cached)
+├── scripts/                    # SLURM/GPU training shell scripts
+│   ├── train_classification_gpu.sh
+│   └── train_generation_gpu.sh
+├── utils/                      # Python utility modules
+│   ├── classification.py       # Classification task pipeline
+│   ├── generation.py           # Generative model pipeline
+│   ├── starter.py              # Core transformer architecture and shared components
+│   └── transformer.yml         # Conda environment specification
 
 ---
 
