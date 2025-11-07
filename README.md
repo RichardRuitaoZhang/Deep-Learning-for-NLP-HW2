@@ -11,19 +11,31 @@ All scripts are designed for GPU execution and follow the standard structure for
 HW2/
 ├── __pycache__/                # Python cache files
 ├── data/                       # Input datasets for training and validation
-├── HW#2/                       # Original assignment materials or provided starter files
-├── hw2/                        # Local working directory for implementation/testing
+│   ├── obqa.train.txt
+│   ├── obqa.valid.txt
+│   ├── obqa.test.txt
+│   ├── wiki.train.txt
+│   ├── wiki.valid.txt
+│   └── wiki.test.txt
 ├── logs/                       # Training and evaluation log outputs
 ├── models/                     # Saved checkpoints and model weights
+│   ├── classifier.pt
+│   ├── generator.pt
+│   └── model_weights
 ├── pretrain/                   # Pretrained transformer models (downloaded or cached)
+│   └── model_weights
 ├── scripts/                    # SLURM/GPU training shell scripts
 │   ├── train_classification_gpu.sh
 │   └── train_generation_gpu.sh
-├── utils/                      # Python utility modules
-│   ├── classification.py       # Classification task pipeline
-│   ├── generation.py           # Generative model pipeline
-│   ├── starter.py              # Core transformer architecture and shared components
-│   └── transformer.yml         # Conda environment specification
+├── utils/                      # Reusable utility modules
+│   ├── metrics.py              # Accuracy/metrics helpers
+│   └── utils_data.py           # Dataset loading & preprocessing
+├── .gitattributes              # Git LFS configuration
+├── README.md                   # Project documentation
+├── classification.py           # Classification task pipeline
+├── generation.py               # Generative model pipeline
+├── starter.py                  # Transformer blocks & shared components
+└── transformer.yml             # Conda environment specification
 ```
 ---
 
