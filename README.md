@@ -7,6 +7,7 @@ All scripts are designed for GPU execution and follow the standard structure for
 
 ## Directory Structure
 
+```
 HW2/
 ├── __pycache__/                # Python cache files
 ├── data/                       # Input datasets for training and validation
@@ -23,7 +24,7 @@ HW2/
 │   ├── generation.py           # Generative model pipeline
 │   ├── starter.py              # Core transformer architecture and shared components
 │   └── transformer.yml         # Conda environment specification
-
+```
 ---
 
 ## Environment Setup
