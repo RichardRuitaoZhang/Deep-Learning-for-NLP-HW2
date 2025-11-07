@@ -101,8 +101,8 @@ Each log file includes a timestamp and task type for reproducibility.
 ## Models
 
 The `models/` directory stores:
-- Intermediate checkpoints (`.pt` or `.bin`)  
-- Final trained model weights  
+- Intermediate checkpoints (`.pt`)  
+- Final trained model weights (`.pt`)  
 - Any exported Hugging Face–compatible model files for submission  
 
 Ensure to compress this directory for final submission if model weights are required.
